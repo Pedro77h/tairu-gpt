@@ -1,4 +1,44 @@
 .container {
- 
+  display: flex;
+  width: 100%;
+  padding-top: 2.5rem;
+  border-top: 1px solid #334155;
+  gap: 1rem;
 }
 
+.InputArea {
+  display: flex;
+  align-items: center;
+  background-color: #0f172a;
+  padding: 1rem;
+  gap: 1rem;
+  flex: 1;
+  border: 1px solid #334155;
+  border-radius: 16px;
+  transition: 0.2s;
+}
+
+.InputArea input {
+  background-color: transparent;
+  font-size: 1.1rem;
+  border: 0;
+  height: 100%;
+  outline: 0;
+  flex: 1;
+  color: #fff;
+}
+
+.submit {
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  border: 1px solid #334155;
+  background: #0f172a;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.submit:hover {
+  border: 2px solid rgb(41, 74, 185);
+}

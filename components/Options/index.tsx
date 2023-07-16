@@ -5,7 +5,7 @@ import { FiMusic } from "react-icons/fi";
 
 import styles from "./styles.module.css";
 
-export const Options = () => {
+export function Options() {
   return (
     <div className={styles.options}>
       <Option Icon={BsCodeSlash} text="Gerador de códigos" />
@@ -14,4 +14,4 @@ export const Options = () => {
       <Option Icon={FiMusic} text="Criador de áudios e musicas " />
     </div>
   );
-};
+}

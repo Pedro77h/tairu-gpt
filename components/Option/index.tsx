@@ -7,6 +7,7 @@ import { IconType } from "react-icons";
 interface OptionProps {
   Icon: IconType;
   text: string;
+  action?: () => any
 }
 
 export const Option = ({ Icon, text }: OptionProps) => {
