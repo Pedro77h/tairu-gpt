@@ -6,7 +6,7 @@ import styles from "./styles.module.css";
 
 export const Input = () => {
   return (
-    <div>
+    <div className={styles.container}>
       <div className={styles.InputArea}>
         <AiOutlinePlusCircle />
         <input
