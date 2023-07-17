@@ -1,16 +1,19 @@
+"use client";
+
 import styles from "../styles/Home.module.css";
-import { Options } from "../components";
 import { Input } from "@src/components";
-import Image from "next/image";
-import MagicWard from "@src/assets/icons/MagicWard.svg";
+import { Providers } from "@src/lib/providers";
+import { selectOption } from "@src/lib/store/reducers/option.reducer";
+import { useSelector } from "react-redux";
+import { OptionHeader } from "@src/components/OptionHeader";
+import { SelectedOption } from "@src/components/SelectedOption";
 
 export default function Page() {
-  return (
-    //todo: reutilização por action
+  const option = useSelector(selectOption);
 
+  return (
     <div className={styles.container}>
-     
-      <Options />
+      <SelectedOption {...option} />
       <Input />
     </div>
   );

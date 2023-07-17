@@ -7,10 +7,10 @@ import { FiMusic } from "react-icons/fi";
 
 import { RootState } from "..";
 
-export type OptionChoice = "home" | "code" | "image" | "video" | "music";
+export type OptionType = "home" | "code" | "image" | "video" | "music";
 
 export interface OptionState {
-  type: OptionChoice;
+  type: OptionType;
   icon: IconType;
   title: string;
 }
@@ -25,7 +25,7 @@ export const OptionSlice = createSlice({
   name: "option",
   initialState,
   reducers: {
-    choiceOption: (state, action: PayloadAction<OptionChoice>) => {
+    choiceOption: (state, action: PayloadAction<OptionType>) => {
       switch (action.payload) {
         case "home": {
           return {

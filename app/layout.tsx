@@ -1,8 +1,6 @@
 import { Providers } from "@src/lib/providers";
 import "../styles/globals.css";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import { Provider } from "react-redux";
 
 export const metadata: Metadata = {
   title: "TairuGPT",
@@ -16,7 +14,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <Providers>{children}</Providers>
+      </body>
     </html>
   );
 }

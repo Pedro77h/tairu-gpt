@@ -1,4 +1,4 @@
-.container header {
+.header {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,12 +15,11 @@
   padding: 0.75rem;
 }
 
-.iconArea img {
-  width: 2rem;
-  height: 2rem;
+.iconArea svg {
+  transition: .5s
 }
 
-.container header h1 {
+.header h1 {
   color: #f8fafc;
   font-size: 1.8rem;
 }

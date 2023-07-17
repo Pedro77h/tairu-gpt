@@ -8,13 +8,13 @@ interface OptionHeaderProps {
   title: string;
 }
 
-export const index = async ({ Icon, title }: OptionHeaderProps) => {
+export const OptionHeader =  ({ Icon, title }: OptionHeaderProps) => {
   return (
-    <header>
+    <div className={styles.header}>
       <div className={styles.iconArea}>
-        <Icon />
+        <Icon size={24} />
       </div>
       <h1>{title}</h1>
-    </header>
+    </div>
   );
 };
