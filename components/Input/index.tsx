@@ -5,11 +5,19 @@ import { AiOutlinePlusCircle } from "react-icons/ai";
 import { PiPaperPlaneRightLight } from "react-icons/pi";
 
 import styles from "./styles.module.css";
-import { Api } from "@src/lib/api";
+import { Api, sendMessage } from "@src/lib/api";
 
 export const Input = () => {
   const [isFocus, setIsFocus] = useState<boolean>(false);
   const [image, setImage] = useState<File | null>();
+
+  const getData = async () => {
+    const { data } = await sendMessage(
+      "Me diga em que dia da semana cai o dia 19 de fevereiro de 2023"
+    );
+
+    console.log(data);
+  };
 
   return (
     <div className={styles.container}>
@@ -47,9 +55,10 @@ export const Input = () => {
           }
           onFocus={() => setIsFocus(true)}
           onBlur={() => setIsFocus(false)}
+          onSubmit={getData}
         />
       </div>
-      <div className={styles.submit}>
+      <div className={styles.submit} onClick={() => getData()}>
         <PiPaperPlaneRightLight color="#fff" size={24} />
       </div>
     </div>
